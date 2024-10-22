@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import React from 'react';
-import Text from "./_components/Text";
+import Container from "./_components/Container";
 
 export const metadata: Metadata = {
     title: "Image Generator",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const ImageGeneratorPage = () => {
     return (
         <div className="flex items-center justify-start w-full max-h-[80%] h-full mx-auto mt-12 max-w-7xl px-4 md:px-8">
-            <Text />
+            <Container />
         </div>
     )
 };
