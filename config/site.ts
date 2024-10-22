@@ -1,6 +1,4 @@
-interface SiteConfig { title: string; description: string };
-
-export const siteConfig: SiteConfig = {
+export const siteConfig = {
     title: "Briefly",
     description: "Condense text effortlessly with Briefly.",
 }

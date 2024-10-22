@@ -1,9 +1,11 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { authMiddleware } from "@clerk/nextjs/server";
+import { NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY } from "./config";
 
-export default clerkMiddleware({
-    authorizedParties: ["/", "/premium"],
+export default authMiddleware({
+  publishableKey: NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+  publicRoutes: ["/", "/premium"],
 });
 
 export const config = {
-    matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
+  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 };
