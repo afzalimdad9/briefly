@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import React from 'react';
-import Container from './_components/Container';
 import Text from "./_components/Text";
 
 export const metadata: Metadata = {

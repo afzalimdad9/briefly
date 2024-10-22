@@ -3,8 +3,6 @@
 import { EDITOR_API_KEY } from '@/config';
 import { Editor } from '@tinymce/tinymce-react';
 
-// mG3t1Ph0eA0P9WS3
-
 const Container = () => {
     return (
         <div className="relative w-full h-full border bg-background shadow-2xl shadow-primary/10 dark:shadow-lg border-border rounded-xl">
@@ -21,7 +19,6 @@ const Container = () => {
                         { value: 'First.Name', title: 'First Name' },
                         { value: 'Email', title: 'Email' },
                     ],
-                    ai_request: (_request: any, respondWith: any) => respondWith.string(() => Promise.reject("Upgrade to premium to use this feature!")),
                     anchor_top: false,
                     contextmenu: false,
                     color_default_background: '#121212',

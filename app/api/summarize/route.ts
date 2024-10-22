@@ -32,7 +32,7 @@ export async function POST(req: Request) {
     );
 
     const summarizedText = response.data.response.sentences
-      .map((sentence: any) => sentence.extracted)
+      .map((sentence: { extracted: string }) => sentence.extracted)
       .join(" ");
 
     return Response.json({ summarizedText }, { status: 200 });

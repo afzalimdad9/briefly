@@ -19,7 +19,7 @@ const InputBox = () => {
             const url = URL.createObjectURL(blob);
             setAudio(url);
         }
-    }, [blob]);
+    }, [setAudio, blob]);
 
     return (
         <div className="relative h-full max-h-full overflow-y-scroll">

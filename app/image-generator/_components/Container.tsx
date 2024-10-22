@@ -3,7 +3,7 @@
 import { Download, Loader2, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import { toast } from "sonner";
 import { Button } from "../../../components/ui/button";
 import { Input } from "../../../components/ui/input";
@@ -16,7 +16,7 @@ const Container = () => {
 
     const [prompt, setPrompt] = useState<string>("");
 
-    const [imgUrl, setImgUrl] = useState<any>();
+    const [imgUrl, setImgUrl] = useState<string>("");
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isModelLoading, setIsModelLoading] = useState<boolean>(false);
@@ -54,7 +54,7 @@ const Container = () => {
             return { error: "Could not generate image." };
         }
     };
-    const query2 = async (e: any) => {
+    const query2 = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
         setIsModelLoading(true);
@@ -104,6 +104,7 @@ const Container = () => {
         if (retryCount > 0) {
             generate();
         }
+        // eslint-disable-next-line
     }, [retryCount]);
 
     return (

@@ -41,7 +41,7 @@ const OutputBox = () => {
         } finally {
             setLoading(false);
         }
-    }, [inputText, setLoading]);
+    }, [setIsPlaying, inputText, setLoading]);
 
     const handleStop = () => {
         window.speechSynthesis.cancel();

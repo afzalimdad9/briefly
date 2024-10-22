@@ -22,9 +22,9 @@ const Bottombar = () => {
 
     const { loading, setLoading } = useIsLoading();
 
-    const { wordCount: iWordCount, setWordCount: setIWordCount } = useTransInputWordCount();
+    const { wordCount: iWordCount } = useTransInputWordCount();
 
-    const { wordCount: oWordCount, setWordCount: setOWordCount } = useTransOutputWordCount();
+    const { wordCount: oWordCount } = useTransOutputWordCount();
 
     const handleTranslate = useCallback(async () => {
         try {
@@ -83,6 +83,7 @@ const Bottombar = () => {
             document.body.removeChild(textArea);
             toast.success('Text copied to clipboard');
         } catch (error) {
+            console.error(error);
             toast.error('Failed to copy text to clipboard');
         }
     };

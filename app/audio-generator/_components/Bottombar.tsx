@@ -62,7 +62,7 @@ const Bottombar = () => {
         } finally {
             setLoading(false);
         }
-    }, [inputText, isPlaying, setLoading]);
+    }, [setBlob, setIsPlaying, inputText, isPlaying, setLoading]);
 
     const handleExportText = () => {
         if (!blob) return;

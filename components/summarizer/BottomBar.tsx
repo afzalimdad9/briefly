@@ -79,6 +79,7 @@ const BottomBar = ({ }) => {
             document.body.removeChild(textArea);
             toast.success('Text copied to clipboard');
         } catch (error) {
+            console.error(error);
             toast.error('Failed to copy text to clipboard');
         }
     };

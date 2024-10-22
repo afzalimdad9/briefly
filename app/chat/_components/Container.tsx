@@ -126,7 +126,7 @@ const Container = () => {
                         )}
                     </div>
                 )}
-                {chatMessages.map((message: any, index) => {
+                {chatMessages.map((message: {type:string;text:string}, index) => {
                     return (
                         <div key={index} className={cn(
                             "rounded-lg text-sm px-3 py-2 my-1.5 max-w-[80%] w-max break-words",

@@ -37,17 +37,13 @@ import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
 
 
-interface Props {
-
-}
-
-const TopBar: React.FC<Props> = () => {
+const TopBar = () => {
 
     const { summarizedText, setSummarizedText } = useInput();
 
     const { textLength, setTextLength } = useTextLength();
 
-    const { loading, setLoading } = useLoading();
+    const { loading } = useLoading();
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
